@@ -1,0 +1,51 @@
+[
+  {
+    "empId": 1,
+    "name": "John Doe",
+    "age": 30,
+    "gender": "Male",
+    "phoneNo": "123-456-789",
+    "email": "johndoe@example.com",
+    "educations": [
+      "High School",
+      "College"
+    ],
+    "shifts": [
+      {
+        "date": "2025-01-01",
+        "timeStart": "08:30",
+        "timeEnd": "16:45"
+      },
+      {
+        "date": "2025-01-02",
+        "timeStart": "09:00",
+        "timeEnd": "17:00"
+      }
+    ]
+  },
+  {
+    "empId": 2,
+    "name": "Ana Maria",
+    "age": 28,
+    "gender": "Female",
+    "phoneNo": "987-654-321",
+    "email": "ana756@example.com",
+    "educations": [
+      "High School",
+      "College"
+    ]
+  },
+  {
+    "empId": 3,
+    "name": "Robert Brown",
+    "age": 35,
+    "gender": "Male",
+    "phoneNo": "555-123-456",
+    "email": "robertbrown@example.com",
+    "educations": [
+      "High School",
+      "College",
+      "University"
+    ]
+  }
+]
