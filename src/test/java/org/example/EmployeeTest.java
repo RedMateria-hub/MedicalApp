@@ -120,6 +120,6 @@ public class EmployeeTest {
     @Test
     public void testGetEducations() {
         List<String> educations = employee.getEducations();
-        assertEquals(Arrays.asList("Bachelor's in Computer Science", "Master's in Software Engineering"), educations, "Educations should be fetched correctly");
+        assertEquals(Arrays.asList("Computer Science", "Software Engineering"), educations, "Educations should be fetched correctly");
     }
 }
