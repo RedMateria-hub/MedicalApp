@@ -14,13 +14,13 @@ public class EmployeeTest {
     @BeforeEach
     public void setUp() {
         // Initialize an employee object to test the methods
-        List<String> educations = Arrays.asList("Bachelor's in Computer Science", "Master's in Software Engineering");
+        List<String> educations = Arrays.asList("Computer Science", "Software Engineering");
         employee = new Employee("John Doe", 30, "Male", "123-456-7890", "johndoe@example.com", 50000.0, educations);
     }
 
     @Test
     public void testEmployeeConstructorWithAllAttributes() {
-        List<String> educations = Arrays.asList("Bachelor's in Business Administration");
+        List<String> educations = Arrays.asList("Business Administration");
         Employee newEmployee = new Employee("Jane Smith", 25, "Female", "987-654-3210", "janesmith@example.com", 55000.0, educations);
 
         assertEquals("Jane Smith", newEmployee.getName());
@@ -34,7 +34,7 @@ public class EmployeeTest {
 
     @Test
     public void testEmployeeConstructorWithoutSalary() {
-        List<String> educations = Arrays.asList("Bachelor's in Computer Science");
+        List<String> educations = Arrays.asList("Computer Science");
         Employee newEmployee = new Employee("Mark Spencer", 28, "Male", "456-789-0123", "markspencer@example.com", educations);
 
         assertEquals("Mark Spencer", newEmployee.getName());
@@ -66,7 +66,7 @@ public class EmployeeTest {
 
     @Test
     public void testEmployeeIdUniqueness() {
-        Employee employee2 = new Employee("Alice Brown", 35, "Female", "111-222-3333", "alicebrown@example.com", 55000.0, Arrays.asList("Bachelor's in Mathematics"));
+        Employee employee2 = new Employee("Andreea", 35, "Female", "111-222-3333", "alicebrown@example.com", 55000.0, Arrays.asList("Bachelor's in Mathematics"));
         assertNotEquals(employee.getEmpId(), employee2.getEmpId(), "Employee IDs should be unique");
     }
 
@@ -83,8 +83,8 @@ public class EmployeeTest {
 
     @Test
     public void testSetName() {
-        employee.setName("Michael Johnson");
-        assertEquals("Michael Johnson", employee.getName(), "Name should be updated correctly");
+        employee.setName("Mihai");
+        assertEquals("Mihai", employee.getName(), "Name should be updated correctly");
     }
 
     @Test
