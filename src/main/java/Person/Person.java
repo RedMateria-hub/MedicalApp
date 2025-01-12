@@ -78,12 +78,11 @@ public class Person implements InterfacePerson {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", gender='" + gender + '\'' +
-                ", phoneNo='" + phoneNo + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return "PERSON INFO:" +
+                "\nName:" + name +
+                ",\nAge:" + age +
+                ",\nGender:" + gender +
+                ",\nPhone Number:" + phoneNo +
+                ",\nEmail Adress:" + email;
     }
 }

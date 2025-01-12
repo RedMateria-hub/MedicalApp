@@ -36,7 +36,6 @@ public class EmpFileManager {
     public static Employee createEmployeeFromInput() {
         Scanner scanner = new Scanner(System.in);
 
-        // Getting general information
         System.out.print("Enter name: ");
         String name = scanner.nextLine();
 
@@ -52,7 +51,6 @@ public class EmpFileManager {
         System.out.print("Enter email: ");
         String email = scanner.nextLine();
 
-        // Getting education details
         List<String> educations = new ArrayList<>();
         System.out.println("Enter education details (type 'x' when finished): ");
         while (true) {
@@ -63,10 +61,28 @@ public class EmpFileManager {
             educations.add(education);
         }
 
-        // Create the Employee object with gathered data
         Employee employee = new Employee(name, age, gender, phoneNo, email, educations);
 
-        // Return the created Employee object
         return employee;
+    }
+
+    public static List<Employee> loadEmployeesFromJson(String filePath) throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        List<Employee> employees = objectMapper.readValue(new File(filePath), objectMapper.getTypeFactory().constructCollectionType(List.class, Employee.class));
+
+        return employees;
+    }
+
+    public static void saveEmployeesFromJson(List<Employee> employees, String filePath) throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.findAndRegisterModules();
+
+        try {
+            objectMapper.writeValue(new File(filePath), employees);
+            System.out.println("Employees were succesfully written to " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

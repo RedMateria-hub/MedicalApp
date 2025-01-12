@@ -62,12 +62,11 @@ public class Employee extends Person implements InterfaceEmployee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "empId=" + empId +
-                ", salary=" + salary +
-                ", educations=" + educations +
-                ", " + super.toString() +
-                '}';
+        return super.toString() +
+                "\nEMPLOYEE INFO:" +
+                "\nEmployee ID:" + empId +
+                ",\nSalary:" + salary +
+                ",\nEducation:" + educations + "\n";
     }
 
 }
